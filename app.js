@@ -1,5 +1,9 @@
 const form = document.getElementById("emailForm");
 const responseBox = document.getElementById("response");
+const API_URL = location.hostname === "127.0.0.1" || location.hostname === "localhost"
+  ? "http://127.0.0.1:8080"
+  : "https://YOUR_RAILWAY_URL_HERE";
+
 
 const bodyInput = document.querySelector("textarea");
 
@@ -18,7 +22,7 @@ form.addEventListener("submit", async function(e) {
     try {
         const formData = new FormData(form);
 
-        const res = await fetch("http://127.0.0.1:8080/send", {
+        const res = await fetch("http://{API_URL}/send", {
             method: "POST",
             body: formData
         });

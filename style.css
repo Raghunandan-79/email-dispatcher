@@ -43,6 +43,8 @@ button:hover {
 
 textarea {
     border-radius: 4px;
+    overflow: hidden;
+    resize: none;
     padding: 10px;
     line-height: 1.4;
     font-family: inherit;
