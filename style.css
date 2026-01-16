@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.container {
+    border-color: white;
+    align-items: center;
+    justify-content: center;
+    width: 420px;
+    margin: 50px auto;
+    background: var(--card-bg);
+    padding: 18px 22px;
+    border-radius: 0px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 7px;
+    margin: 8px 0;
+    background: var(--card-bg);
+    color: var(--text);
+    border: 1px solid #666;
+    box-sizing: border-box;
+}
+
+button {
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 2px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+textarea {
+    border-radius: 4px;
+    padding: 10px;
+    line-height: 1.4;
+    font-family: inherit;
+}
+
+.response {
+    margin-top: 12px;
+    font-weight: bold;
+    color: var(--text);
+}
+
+:root {
+    --bg: #f5f5f5;
+    --card-bg: white;
+    --text: #111;
+    --button-bg: #333;
+    --button-text: white;
+    --response-success: green;
+    --response-error: red;
+}
+
+:root[data-theme='dark'] {
+    --bg: #111;
+    --card-bg: #181818;
+    --text: #e5e5e5;
+    --button-bg: #444;
+    --button-text: white;
+}
+

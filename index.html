@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Dispatcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Email Dispatcher</h2>
+
+    <form id="emailForm" enctype="multipart/form-data">
+
+        <label>Your Gmail:</label>
+        <input type="email" name="email" placeholder="your@gmail.com" required>
+
+        <label>App Password:</label>
+        <input type="password" name="password" placeholder="16-character app password" required>
+
+        <label>From Name:</label>
+        <input type="text" name="fromName" placeholder="Your Sender Name" required>
+
+        <label>Subject:</label>
+        <input type="text" name="subject" placeholder="Email subject" required>
+
+        <label>Body:</label>
+        <textarea name="body" rows="6" placeholder="Email content..." required></textarea>
+
+        <label>Recipients CSV (Name,Email):</label>
+        <input type="file" name="csvFile" accept=".csv" required>
+
+        <button type="submit">Send Emails</button>
+    </form>
+
+    <p id="response" class="response"></p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
