@@ -1,8 +1,6 @@
 const form = document.getElementById("emailForm");
 const responseBox = document.getElementById("response");
-const API_URL = location.hostname === "127.0.0.1" || location.hostname === "localhost"
-  ? "http://127.0.0.1:8080"
-  : "https://email-dispatcher-production-0621.up.railway.app/";
+const API_URL = "https://email-dispatcher-production-0621.up.railway.app/";
 
 
 const bodyInput = document.querySelector("textarea");
