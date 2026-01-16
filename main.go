@@ -34,8 +34,21 @@ func main() {
 
 	// CLI arguments (user input)
 	subject := flag.String("subject", "Hello!", "Email subject")
-	body := flag.String("body", "This is a test message!", "Email body")
+	bodyFile := flag.String("body-file", "", "Path to .txt file containing email body")
 	flag.Parse()
+
+
+	var bodyText string
+
+	if *bodyFile != "" {
+		data, err := os.ReadFile(*bodyFile)
+		if err != nil {
+			panic("failed to read body file: " + err.Error())
+		}
+		bodyText = string(data)
+	} else {
+		panic("--body-file is required (provide a .txt file)")
+	}
 
 	// Load SMTP config from .env
 	cfg := SMTPConfig{
@@ -50,7 +63,7 @@ func main() {
 
 	// producer: load CSV into channel
 	go func() {
-		loadRecipient("./emails.csv", recipientChannel, *subject, *body, cfg.FromName)
+		loadRecipient("./emails.csv", recipientChannel, *subject, bodyText, cfg.FromName)
 	}()
 
 
