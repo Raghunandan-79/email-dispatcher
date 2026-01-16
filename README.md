@@ -97,4 +97,4 @@ Create a `body.txt` file and add your email content in it
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
