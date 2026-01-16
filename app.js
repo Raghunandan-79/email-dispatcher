@@ -2,7 +2,7 @@ const form = document.getElementById("emailForm");
 const responseBox = document.getElementById("response");
 const API_URL = location.hostname === "127.0.0.1" || location.hostname === "localhost"
   ? "http://127.0.0.1:8080"
-  : "https://YOUR_RAILWAY_URL_HERE";
+  : "https://email-dispatcher-production-0621.up.railway.app/";
 
 
 const bodyInput = document.querySelector("textarea");
